@@ -1,4 +1,4 @@
-# projects-cloud
-Collection of projects in computational aerodynamics within ACE/FASTT.
+# MONET
+**MO**delli**N**g **E**arth's a**T**mosphere
 
-Each collaborator SHOULD always work in his own branch where all his/her source and project files SHOULD always be stored. Restrictions on 'push' command are enforced to each specific branch.
+Project looking to implement a Python-based a library of different models of Earth's atmosphere.
