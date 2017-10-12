@@ -7,16 +7,12 @@ Each branch is linked to a specific project on the tab 'Projects' where its hist
 
 Git cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
 
+
 Current list of projects (on different branches):
 
-**ARCTIC** - Adaptive CFD mesh Regeneration for ComputaTIonal aerodynamiCs
-
-**MONET**  - MOdelliNg Earth's aTmosphere
-
-**OSAKA**  - Open-Source low-fidelity Aerothermodynamics pacKAge
-
-**PASCAL** - Parametric definition of Access to SpaCe vehicLes
-
-**PETRA**  - Parametric dEfinition of fuTuRe Aircraft designs
-
-**SWIM**   - Shock Waves Identification Method
+- **ARCTIC** - Adaptive CFD mesh Regeneration for ComputaTIonal aerodynamiCs
+- **MONET**  - MOdelliNg Earth's aTmosphere
+- **OSAKA**  - Open-Source low-fidelity Aerothermodynamics pacKAge
+- **PASCAL** - Parametric definition of Access to SpaCe vehicLes
+- **PETRA**  - Parametric dEfinition of fuTuRe Aircraft designs
+- **SWIM**   - Shock Waves Identification Method
