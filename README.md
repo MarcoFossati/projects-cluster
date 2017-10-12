@@ -1,4 +1,3 @@
-# projects-cloud
-Collection of projects in computational aerodynamics within ACE/FASTT.
+# ARCTIC
 
-Each collaborator SHOULD always work in his own branch where all his/her source and project files SHOULD always be stored. Restrictions on 'push' command are enforced to each specific branch.
+Project on the formulation and development of an automatic technique to adaptively regenerate a CFD mesh on the basis of previously computed solutions. It is an implementation of the concept "adapt-by-remesh".
