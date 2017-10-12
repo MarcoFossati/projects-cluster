@@ -1,4 +1,4 @@
-# projects-cloud
-Collection of projects in computational aerodynamics within ACE/FASTT.
+# PASCAL
+**P**arametric definition of **A**ccess to **S**pa**C**e vehic**L**es geometry
 
-Each collaborator SHOULD always work in his own branch where all his/her source and project files SHOULD always be stored. Restrictions on 'push' command are enforced to each specific branch.
+Project aiming to create a paraemtrized CAD model of a series of access-to-space systems to be used in analysis and MDO.
