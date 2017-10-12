@@ -1,4 +1,4 @@
-# projects-cloud
-Collection of projects in computational aerodynamics within ACE/FASTT.
+# SWIM
+**S**hock **W**aves **I**dentification **M**ethod.
 
-Each collaborator SHOULD always work in his own branch where all his/her source and project files SHOULD always be stored. Restrictions on 'push' command are enforced to each specific branch.
+Project looking to formulate and implement a series of different shock estimators for supersonic flows.
