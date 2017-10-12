@@ -1,4 +1,4 @@
 # ARCTIC
-Adaptive CFD mesh Regeneration for ComputaTIonal aerodynamiCs
+**A**daptive CFD mesh **R**egeneration for **C**omputa**TI**onal aerodynami**C**s
 
 Project on the formulation and development of an automatic technique to adaptively regenerate a CFD mesh on the basis of previously computed solutions. It is an implementation of the concept "adapt-by-remesh".
