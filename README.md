@@ -1,4 +1,4 @@
-# projects-cloud
-Collection of projects in computational aerodynamics within ACE/FASTT.
+# PETRA
+**P**arametric d**E**finition of fu**T**u**R**e **A**ircraft designs
 
-Each collaborator SHOULD always work in his own branch where all his/her source and project files SHOULD always be stored. Restrictions on 'push' command are enforced to each specific branch.
+Project aiming to create a paraemtrized CAD model of a series of future aircraft configurations to be used in analysis and MDO.
