@@ -11,8 +11,15 @@ Git cheat sheet: https://education.github.com/git-cheat-sheet-education.pdf
 List of projects (on different branches):
 
 - **ARCTIC** - Adaptive CFD mesh Regeneration for ComputaTIonal aerodynamiCs
+- **BLAH**   - Boundary LAyer Height generation
 - **MONET**  - MOdelliNg Earth's aTmosphere
 - **OSAKA**  - Open-Source low-fidelity Aerothermodynamics pacKAge
 - **PASCAL** - Parametric definition of Access to SpaCe vehicLes
 - **PETRA**  - Parametric dEfinition of fuTuRe Aircraft designs
 - **SWIM**   - Shock Waves Identification Method
+
+
+**Copyright (C) 2017:**
+*Any code in this repository is free software; you can redistribute it and/or modify it under the terms of the GNU Lesser General Public License as published by the Free Software Foundation; either version 2.1 of the License, or (at your option) any later version.    
+                                                                       
+Any code is distributed in the hope that it will be useful, but **WITHOUT ANY WARRANTY**; without even the implied warranty of **MERCHANTABILITY** or **FITNESS FOR A PARTICULAR PURPOSE**. See the GNU Lesser General Public License for more details: <http://www.gnu.org/licenses/>.*
