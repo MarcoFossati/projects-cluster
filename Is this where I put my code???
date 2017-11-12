@@ -1,0 +1,44 @@
+#Author - Liam Watson
+#created 11/11/2017
+
+
+from PySide import QtCore, QtGui
+from PySide.QtGui import QLineEdit, QRadioButton
+import FreeCAD, FreeCADGui, Draft
+import math
+
+App.newDocument("Skylon")
+App.setActiveDocument("Skylon")
+App.ActiveDocument = App.getDocument("Skylon")
+Gui.ActiveDocument = Gui.getDocument("Skylon")
+
+#define the radius of the fuselage
+r = 6
+#define the length of the fuselage
+l=36
+
+#creating initial cirlce for the fuselage
+App.activeDocument().addObject('Sketcher::SketchObject','Sketch')
+App.activeDocument().Sketch.Placement =                     App.Placement(App.Vector(0.000000,0.000000,l/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
+App.ActiveDocument.Sketch.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),r),False)
+
+#recomputing the document
+App.ActiveDocument.recompute
+
+#creating the second circle for the fuselage
+__doc__=FreeCAD.getDocument("Skylon")
+__doc__.addObject("Part::Mirroring")
+__doc__.ActiveObject.Source=__doc__.getObject("Sketch")
+__doc__.ActiveObject.Label=u"Sketch (Mirror #1)"
+__doc__.ActiveObject.Normal=(0,0,1)
+__doc__.ActiveObject.Base=(0,0,l)
+del __doc__
+
+#lofting between the circles
+from FreeCAD import Base
+import Part
+App.getDocument('Unnamed').addObject('Part::Loft','Loft')
+App.getDocument('Unnamed').ActiveObject.Sections=[App.getDocument('Unnamed').Sketch, App.getDocument('Unnamed').Part__Mirroring, ]
+App.getDocument('Unnamed').ActiveObject.Solid=True
+App.getDocument('Unnamed').ActiveObject.Ruled=False
+App.getDocument('Unnamed').ActiveObject.Closed=False
