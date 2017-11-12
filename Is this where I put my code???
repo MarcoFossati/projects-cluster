@@ -37,8 +37,9 @@ del __doc__
 #lofting between the circles
 from FreeCAD import Base
 import Part
-App.getDocument('Unnamed').addObject('Part::Loft','Loft')
-App.getDocument('Unnamed').ActiveObject.Sections=[App.getDocument('Unnamed').Sketch, App.getDocument('Unnamed').Part__Mirroring, ]
-App.getDocument('Unnamed').ActiveObject.Solid=True
-App.getDocument('Unnamed').ActiveObject.Ruled=False
-App.getDocument('Unnamed').ActiveObject.Closed=False
+App.getDocument('Skylon').addObject('Part::Loft','Loft')
+App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Unnamed').Sketch, App.getDocument('Skylon').Part__Mirroring, ]
+App.getDocument('Skylon').ActiveObject.Solid=True
+App.getDocument('Skylon').ActiveObject.Ruled=False
+App.getDocument('Skylon').ActiveObject.Closed=False
+
