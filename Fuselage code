@@ -14,10 +14,12 @@ Gui.ActiveDocument = Gui.getDocument("Skylon")
 
 #define the radius of the fuselage at cargo bay
 r_cargo = 6
-#define the length of the fusselage at max 'r'
-l_aircraft = 36
+#define the length of the cargo bay
+l_cargo = 36
+#define the length of the l_aircraft
+l_aircraft = 80
 #define the maximum angle of attack at takeoff in degrees
-a_takeoff=25
+a_takeoff = 25
 #height of tail above horizontal datum
 h=(math.tan(math.radians(a_takeoff))*22)/2
 #radius of fuselage exhaust
@@ -25,7 +27,7 @@ r_exhaust_f = 0.5
 
 #creating first cirlce for the fuselage at cargo bay
 App.activeDocument().addObject('Sketcher::SketchObject','Cargo1')
-App.activeDocument().Cargo1.Placement = App.Placement(App.Vector(0.000000,0.000000,l_aircraft/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
+App.activeDocument().Cargo1.Placement = App.Placement(App.Vector(0.000000,0.000000,l_cargo/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
 App.ActiveDocument.Cargo1.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),r_cargo),False)
 
 #creating second cirlce for the fuselage at cargo bay
@@ -35,17 +37,17 @@ App.ActiveDocument.Cargo2.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0
 
 #creating second cirlce for the fuselage at cargo bay
 App.activeDocument().addObject('Sketcher::SketchObject','Cargo3')
-App.activeDocument().Cargo3.Placement = App.Placement(App.Vector(0.000000,0.000000,-l_aircraft/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
+App.activeDocument().Cargo3.Placement =                   App.Placement(App.Vector(0.000000,0.000000,-l_cargo/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
 App.ActiveDocument.Cargo3.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),r_cargo),False)
 
 #creating nose of the aircraft
 App.activeDocument().addObject('Sketcher::SketchObject','nose')
-App.activeDocument().nose.Placement = App.Placement(App.Vector(0.000000,0.000000,l_aircraft+22),App.Rotation(0.000000,0.000000,0.000000,1.000000))
+App.activeDocument().nose.Placement = App.Placement(App.Vector(0.000000,0.000000,l_aircraft/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
 App.ActiveDocument.nose.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),0.000001),False)
 
 #creating tail of the aircraft
 App.activeDocument().addObject('Sketcher::SketchObject','tail')
-App.activeDocument().tail.Placement = App.Placement(App.Vector(0.000000,h,-l_aircraft-22),App.Rotation(0.000000,0.000000,0.000000,1.000000))
+App.activeDocument().tail.Placement = App.Placement(App.Vector(0.000000,h,-l_aircraft/2),App.Rotation(0.000000,0.000000,0.000000,1.000000))
 App.ActiveDocument.tail.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),r_exhaust_f),False)
 
 #recomputing the document
