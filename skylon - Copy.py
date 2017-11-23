@@ -248,3 +248,5 @@ App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Skylon').cone_
 App.getDocument('Skylon').ActiveObject.Solid=True
 App.getDocument('Skylon').ActiveObject.Ruled=False
 App.getDocument('Skylon').ActiveObject.Closed=False
+
+App.ActiveDocument.recompute
