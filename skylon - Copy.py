@@ -70,6 +70,8 @@ h_mid_eng = 0
 h_front_eng = -math.tan(math.radians(a_front_eng))*(l_engine_body/2)
 #height of 'front_eng_vent1' from ngine datum
 h_front_eng_vent1 = -(math.tan(math.radians(a_front_eng))*((l_engine_body/2) + l_front_vent))
+#height of 'cone tip' from engine datum
+h_cone_tip = -( math.tan( math.radians( a_front_eng ))* ((l_engine_body/2) + l_front_vent + l_engine_cone))
 
 """
 Creating the fuselage
