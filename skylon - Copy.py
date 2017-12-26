@@ -1,16 +1,22 @@
 #Author - Liam Watson
 #created 11/11/2017
-#updated 21/11/2017
+#updated 26/12/2017
 
 from PySide import QtCore, QtGui
 from PySide.QtGui import QLineEdit, QRadioButton
 import FreeCAD, FreeCADGui, Draft
+import importAirfoilDAT
 import math
 
 App.newDocument("Skylon")
 App.setActiveDocument("Skylon")
 App.ActiveDocument = App.getDocument("Skylon")
 Gui.ActiveDocument = Gui.getDocument("Skylon")
+
+'''
+All dimensions are in mm,
+unless stated otherwise
+'''
 
 #define the radius of the fuselage at cargo bay
 d_cargo = 6300
@@ -72,6 +78,97 @@ h_front_eng = -math.tan(math.radians(a_front_eng))*(l_engine_body/2)
 h_front_eng_vent1 = -(math.tan(math.radians(a_front_eng))*((l_engine_body/2) + l_front_vent))
 #height of 'cone tip' from engine datum
 h_cone_tip = -( math.tan( math.radians( a_front_eng ))* ((l_engine_body/2) + l_front_vent + l_engine_cone))
+
+#define input parameters
+#aerofoils
+bodyaerofoil = str("D:/University/Year 4/Dissertation/Skylon/NACA0010-64.dat")
+tipaerofoil = str("D:/University/Year 4/Dissertation/Skylon/NACA0010-64.dat")
+
+#front wing sweep angle
+wing_sweep_angle_f = 55
+#rear wing sweep angle
+wing_sweep_angle_r = 15
+
+#wing root chord
+root_chord = 25517
+#wing tip chord
+tip_chord = 7000
+#wing span
+span = 21834
+
+#root thickness
+root_thick = 1200
+#tip thickness
+tip_thick = 510
+#aerofoil twist @ root (degrees)
+twist_root = 0
+#aerofoil twist @ tip (degrees)
+twist_tip = 0
+#diherdral (degrees)
+dihedral = 6.273
+#define the radius of the fuselage at cargo bay
+d_cargo = 6300
+r_cargo = d_cargo/2
+
+#distance of wing root to the zero datum point (x-axis)
+d_from_datum_wing_root_x = 31473
+#distance of wing root to the zero datum point (y-axis)
+d_from_datum_wing_root_y = 0.000000
+#distance of wing root to the zero datum point (z-axis)
+d_from_datum_wing_root_z = -2550
+
+#distance of wing tip to the zero datum point (x-axis)
+d_from_datum_wing_tip_x = (d_from_datum_wing_root_x + (math.tan(math.radians(wing_sweep_angle_f))*span/2))
+#distance of wing tip to the zero datum point (y-axis)
+d_from_datum_wing_tip_y = span/2
+#distance of wing tip to the zero datum point (z-axis)
+d_from_datum_wing_tip_z = ((math.tan(math.radians(dihedral))*(span/2))+d_from_datum_wing_root_z)
+
+zk1 = d_from_datum_wing_root_z
+zk2 = d_from_datum_wing_tip_z
+
+xk1 = d_from_datum_wing_root_x
+xk2 = d_from_datum_wing_tip_x
+
+#kink chords
+ck1 = root_chord
+ck2 = tip_chord
+
+yk1 = ck1
+yk2 = ck2
+
+zscale = 0
+
+#angle of canards with respect to fuselage
+fuse_alpha = 15
+
+#canard centre distance from the datum point
+d_canard_from_x = 4000
+d_canard_from_y = (math.tan(math.radians(fuse_alpha))*(d_canard_from_x))
+d_canard_from_z = 0
+
+#canard span
+canard_span = 9300
+d_span = canard_span/2
+
+#angle of canards with respect to fuselage
+fuse_alpha = 15
+#canard thickness
+c_thick = 350
+#canard tip length
+c_tip = 1200
+#canard sweep length
+c_sw_length = 10000
+#half canard length x-plane
+c_half_x = 3416
+#angle of attack of canard in degrees
+c_alpha = -15
+
+#v(x) y position
+v1_y = d_canard_from_y
+v2_y = d_span
+v3_y = d_span
+v4_y = (math.tan(math.radians(fuse_alpha-5))*(c_sw_length))
 
 """
 Creating the fuselage
@@ -218,7 +315,7 @@ App.activeDocument().front_eng_vent2_l.addGeometry(Part.Circle(App.Vector(0.0000
 
 #creating sketch at the front of the engine for the front of the vent
 App.activeDocument().addObject('Sketcher::SketchObject','front_eng_vent1_l')
-App.activeDocument().front_eng_vent1_l.Placement = App.Placement(App.Vector(d_front_datum_x - l_engine_body/2- l_front_vent, -d_from_datum_y, d_from_datum_z + h_front_eng_vent1),App.Rotation(App.Vector(0.00000,1.00000,0.00000),90 - a_front_eng), App.Vector(0,0,0))
+App.activeDocument().front_eng_vent1_l.Placement = App.Placement(App.Vector(d_front_datum_x - l_engine_body/2 - l_front_vent, -d_from_datum_y, d_from_datum_z + h_front_eng_vent1),App.Rotation(App.Vector(0.00000,1.00000,0.00000),90 - a_front_eng), App.Vector(0,0,0))
 App.activeDocument().front_eng_vent1_l.addGeometry(Part.Circle(App.Vector(0.000000,0.000000,0.000000),App.Vector(0,0,1),r_front_vent1),False)
 
 #lofting between the front vents
@@ -250,5 +347,88 @@ App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Skylon').cone_
 App.getDocument('Skylon').ActiveObject.Solid=True
 App.getDocument('Skylon').ActiveObject.Ruled=False
 App.getDocument('Skylon').ActiveObject.Closed=False
+
+App.ActiveDocument.recompute
+
+'''
+Creating wing
+'''
+
+#importing, scaling and positioning centre aerofoil
+importAirfoilDAT.insert(bodyaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(ck1,yk1,zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.ActiveDocument.getObject("DWire").Placement = App.Placement(App.Vector(xk1,0,zk1),App.Rotation(App.Vector(1,0,0),90))
+App.ActiveDocument.recompute()
+
+#importing, scaling and positioning tip aerofoils
+importAirfoilDAT.insert(tipaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(ck2,yk2,zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.ActiveDocument.getObject("DWire001").Placement = App.Placement(App.Vector(xk2,10917,zk2),App.Rotation(App.Vector(1,0,0),90))
+App.ActiveDocument.recompute()
+
+importAirfoilDAT.insert(tipaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(ck2,yk2,zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.ActiveDocument.getObject("DWire002").Placement = App.Placement(App.Vector(xk2,-10917,zk2),App.Rotation(App.Vector(1,0,0),90))
+App.ActiveDocument.recompute()
+
+#lofting bewtween centre aerofoil to outer aerofoils
+from FreeCAD import Base
+import Part
+App.ActiveDocument.addObject('Part::Loft','Loft8')
+App.ActiveDocument.ActiveObject.Sections=[App.ActiveDocument.DWire, App.ActiveDocument.DWire001 ]
+App.ActiveDocument.ActiveObject.Solid=True
+App.ActiveDocument.ActiveObject.Ruled=False
+App.ActiveDocument.ActiveObject.Closed=False
+App.ActiveDocument.recompute()
+
+App.ActiveDocument.addObject('Part::Loft','Loft9')
+App.ActiveDocument.ActiveObject.Sections=[App.ActiveDocument.DWire, App.ActiveDocument.DWire002 ]
+App.ActiveDocument.ActiveObject.Solid=True
+App.ActiveDocument.ActiveObject.Ruled=False
+App.ActiveDocument.ActiveObject.Closed=False
+App.ActiveDocument.recompute()
+
+'''
+Creating the canards
+'''
+
+from FreeCAD import Base
+
+#turning lines into 3-D shape
+s1_r = Part.Shape([l1_r,l2_r,l3_r,l4_r])
+w_r = Part.Wire(s1_r.Edges)
+f_r = Part.Face(w_r)
+P_r = f_r.extrude(Base.Vector(0,0,c_thick))
+Part.show(P_r)
+
+App.ActiveDocument.recompute
+
+#creating points of canard
+v1_l = Base.Vector(-c_half_x, -v1_y, d_canard_from_z)
+v2_l = Base.Vector(c_half_x, -v2_y, 0)
+v3_l = Base.Vector(c_half_x + c_tip, -v3_y, 0)
+v4_l = Base.Vector(c_sw_length-7416, -v4_y, 0)
+
+#creating lines of canard
+l1_l = Part.Line(v1_l,v2_l)
+l2_l = Part.Line(v2_l,v3_l)
+l3_l = Part.Line(v3_l,v4_l)
+l4_l = Part.Line(v4_l,v1_l)
+
+#turning lines into 3-D Shape001
+s1_l = Part.Shape([l1_l,l2_l,l3_l,l4_l])
+w_l = Part.Wire(s1_l.Edges)
+f_l = Part.Face(w_l)
+P_l = f_l.extrude(Base.Vector(0,0,c_thick))
+Part.show(P_l)
+
+App.ActiveDocument.recompute
+
+#positioning the canards relative to the frame
+App.getDocument("Skylon").Shape.Placement = App.Placement(App.Vector(d_canard_from_x + c_half_x, 0, d_canard_from_z),App.Rotation(App.Vector(0,1,0),c_alpha))
+App.getDocument("Skylon").Shape001.Placement = App.Placement(App.Vector(d_canard_from_x + c_half_x, 0, d_canard_from_z),App.Rotation(App.Vector(0,1,0),c_alpha))
 
 App.ActiveDocument.recompute
