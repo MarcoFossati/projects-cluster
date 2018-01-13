@@ -1,6 +1,6 @@
 #Author - Liam Watson
 #created 11/11/2017
-#updated 26/12/2017
+#updated 13/01/2018
 
 from PySide import QtCore, QtGui
 from PySide.QtGui import QLineEdit, QRadioButton
@@ -17,7 +17,9 @@ Gui.ActiveDocument = Gui.getDocument("Skylon")
 All dimensions are in mm,
 unless stated otherwise
 '''
-
+'''
+fuselage input parameters and calculated parameters
+'''
 #define the radius of the fuselage at cargo bay
 d_cargo = 6300
 r_cargo = d_cargo/2
@@ -27,10 +29,15 @@ l_cargo = 28000
 l_aircraft = 83133
 #define the maximum angle of attack at takeoff in degrees
 a_takeoff = 10
-#height of tail above horizontal datum
-h_exhaust=(math.tan(math.radians(a_takeoff))*22000)/2
 #radius of fuselage exhaust
 r_exhaust_f = 250
+#height of tail above horizontal datum
+h_exhaust=(math.tan(math.radians(a_takeoff))*((l_aircraft - l_cargo)/2))/2 + (r_exhaust_f/2)
+
+
+'''
+Engine input parameters and calculated parameters
+'''
 
 #distance of engine datum point to the zero datum point (x-axis)
 d_front_datum_x = 49207
@@ -79,6 +86,9 @@ h_front_eng_vent1 = -(math.tan(math.radians(a_front_eng))*((l_engine_body/2) + l
 #height of 'cone tip' from engine datum
 h_cone_tip = -( math.tan( math.radians( a_front_eng ))* ((l_engine_body/2) + l_front_vent + l_engine_cone))
 
+'''
+Wing input parameters and calculated variables
+'''
 #define input parameters
 #aerofoils
 bodyaerofoil = str("D:/University/Year 4/Dissertation/Skylon/NACA0010-64.dat")
@@ -106,22 +116,15 @@ twist_root = 0
 twist_tip = 0
 #diherdral (degrees)
 dihedral = 6.273
-#define the radius of the fuselage at cargo bay
-d_cargo = 6300
-r_cargo = d_cargo/2
 
-#distance of wing root to the zero datum point (x-axis)
+#distance of wing root to the zero datum point
 d_from_datum_wing_root_x = 31473
-#distance of wing root to the zero datum point (y-axis)
 d_from_datum_wing_root_y = 0.000000
-#distance of wing root to the zero datum point (z-axis)
 d_from_datum_wing_root_z = -2550
 
-#distance of wing tip to the zero datum point (x-axis)
+#distance of wing tip to the zero datum point
 d_from_datum_wing_tip_x = (d_from_datum_wing_root_x + (math.tan(math.radians(wing_sweep_angle_f))*span/2))
-#distance of wing tip to the zero datum point (y-axis)
 d_from_datum_wing_tip_y = span/2
-#distance of wing tip to the zero datum point (z-axis)
 d_from_datum_wing_tip_z = ((math.tan(math.radians(dihedral))*(span/2))+d_from_datum_wing_root_z)
 
 zk1 = d_from_datum_wing_root_z
@@ -137,42 +140,74 @@ ck2 = tip_chord
 yk1 = ck1
 yk2 = ck2
 
-zscale = 0
+'''
+Canard input variables and calculated parameters
+'''
+canardaerofoil = str("D:/University/Year 4/Dissertation/Skylon/NACA0010-64.dat")
 
 #angle of canards with respect to fuselage
-fuse_alpha = 15
-
+fuse_alpha = 13
+#angle of attack of canard in degrees
+c_alpha = -10
+zscale = 0
 #canard centre distance from the datum point
 d_canard_from_x = 4000
-d_canard_from_y = (math.tan(math.radians(fuse_alpha))*(d_canard_from_x))
+d_canard_from_y = (math.tan(math.radians(fuse_alpha))*(d_canard_from_x)) + 150
 d_canard_from_z = 0
 
 #canard span
 canard_span = 9300
 d_span = canard_span/2
 
-#angle of canards with respect to fuselage
-fuse_alpha = 15
-#canard thickness
-c_thick = 350
-#canard tip length
-c_tip = 1200
-#canard sweep length
-c_sw_length = 10000
-#half canard length x-plane
-c_half_x = 3416
-#angle of attack of canard in degrees
-c_alpha = -15
+#canard base chord
+cb_c = 6000
+#canard tip chord
+ct_c = 1200
 
-#v(x) y position
-v1_y = d_canard_from_y
-v2_y = d_span
-v3_y = d_span
-v4_y = (math.tan(math.radians(fuse_alpha-5))*(c_sw_length))
+#Abbreivations
+dc_x = d_canard_from_x
+dc_y = d_canard_from_y
+dc_z = d_canard_from_z
+
+
+'''
+Tailfin input parameters and calculated variables
+'''
+
+tailaerofoil = str("D:/University/Year 4/Dissertation/Skylon/NACA0010-64.dat")
+#curvature of fuselage
+beta = (math.radians(math.atan((r_cargo - h_exhaust - r_exhaust_f)/((l_aircraft - l_cargo)/2))))
+
+#tailfin angle relative to the airflow
+fin_alpha = 0
+#tailfin thickness
+fin_thick = 300
+#tailfin length
+fin_length_base = 7261
+#tailfin height
+fin_height = 4444
+#length of the top of the tailfin
+fin_length_top = 1500
+
+#distances from zero datum (fin)
+d_fin_from_x = 74633
+d_fin_from_y = fin_thick/2
+d_fin_from_z = r_cargo - beta*(d_fin_from_x - ((l_aircraft+l_cargo)/2))
+
+#Abbreivations for use
+fch_b = fin_length_base
+fch_t = fin_length_top
+df_x = d_fin_from_x
+df_y = d_fin_from_y
+df_z = d_fin_from_z
+fh = fin_height
 
 """
 Creating the fuselage
 """
+from FreeCAD import Base
+import Part
+
 #creating first cirlce for the fuselage at cargo bay
 App.activeDocument().addObject('Sketcher::SketchObject','Cargo1')
 App.activeDocument().Cargo1.Placement = App.Placement(App.Vector((l_aircraft - l_cargo)/2, 0.000000,0.000000), App.Rotation(0.500000,0.500000,0.500000,0.500000))
@@ -394,41 +429,112 @@ App.ActiveDocument.recompute()
 '''
 Creating the canards
 '''
+from FreeCAD import Base
+import Part
+
+importAirfoilDAT.insert(canardaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(cb_c, cb_c, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.getDocument("Skylon").DWire003.Placement=App.Placement(App.Vector(dc_x , dc_y, dc_z), App.Rotation(fuse_alpha, c_alpha, 90), App.Vector(0,0,0))
+App.ActiveDocument.recompute()
+
+importAirfoilDAT.insert(canardaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(ct_c, ct_c, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.getDocument("Skylon").DWire004.Placement=App.Placement(App.Vector(dc_x + cb_c, d_span, dc_z), App.Rotation(fuse_alpha, c_alpha, 90), App.Vector(0,0,0))
+App.ActiveDocument.recompute()
+
+importAirfoilDAT.insert(canardaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(cb_c, cb_c, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.getDocument("Skylon").DWire005.Placement=App.Placement(App.Vector(dc_x , -dc_y, -dc_z), App.Rotation(-fuse_alpha, c_alpha, 90), App.Vector(0,0,0))
+App.ActiveDocument.recompute()
+
+importAirfoilDAT.insert(canardaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(ct_c, ct_c, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.getDocument("Skylon").DWire006.Placement=App.Placement(App.Vector(dc_x + cb_c, -d_span, -dc_z), App.Rotation(-fuse_alpha, c_alpha, 90), App.Vector(0,0,0))
+App.ActiveDocument.recompute()
+
+App.getDocument('Skylon').addObject('Part::Loft','Loft10')
+App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Skylon').DWire003, App.getDocument('Skylon').DWire004, ]
+App.getDocument('Skylon').ActiveObject.Solid=True
+App.getDocument('Skylon').ActiveObject.Ruled=False
+App.getDocument('Skylon').ActiveObject.Closed=True
+
+App.getDocument('Skylon').addObject('Part::Loft','Loft11')
+App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Skylon').DWire005, App.getDocument('Skylon').DWire006, ]
+App.getDocument('Skylon').ActiveObject.Solid=True
+App.getDocument('Skylon').ActiveObject.Ruled=False
+App.getDocument('Skylon').ActiveObject.Closed=True
+
+App.activeDocument().recompute()
+
+'''
+creating tailfin
+'''
 
 from FreeCAD import Base
+import Part
 
-#turning lines into 3-D shape
-s1_r = Part.Shape([l1_r,l2_r,l3_r,l4_r])
-w_r = Part.Wire(s1_r.Edges)
-f_r = Part.Face(w_r)
-P_r = f_r.extrude(Base.Vector(0,0,c_thick))
-Part.show(P_r)
+#importing, scaling and positioning aerofoils
+importAirfoilDAT.insert(tailaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(fch_b, fch_b, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.ActiveDocument.getObject("DWire007").Placement = App.Placement(App.Vector(df_x, df_y, df_z - 20),App.Rotation(App.Vector(0,1,0),beta*15000))
+App.ActiveDocument.recompute()
 
-App.ActiveDocument.recompute
+importAirfoilDAT.insert(tailaerofoil,FreeCAD.ActiveDocument.Name)
+Draft.scale(App.ActiveDocument.ActiveObject,delta=App.Vector(fch_t, fch_t, zscale),center=App.Vector(0,0,0),legacy=True)
+App.ActiveDocument.recompute()
+App.ActiveDocument.getObject("DWire008").Placement = App.Placement(App.Vector(df_x + fch_b, df_y,df_z + fh),App.Rotation(App.Vector(0,0,0),0))
+App.ActiveDocument.recompute()
 
-#creating points of canard
-v1_l = Base.Vector(-c_half_x, -v1_y, d_canard_from_z)
-v2_l = Base.Vector(c_half_x, -v2_y, 0)
-v3_l = Base.Vector(c_half_x + c_tip, -v3_y, 0)
-v4_l = Base.Vector(c_sw_length-7416, -v4_y, 0)
+App.getDocument('Skylon').addObject('Part::Loft','Loft12')
+App.getDocument('Skylon').ActiveObject.Sections=[App.getDocument('Skylon').DWire007, App.getDocument('Skylon').DWire008, ]
+App.getDocument('Skylon').ActiveObject.Solid=True
+App.getDocument('Skylon').ActiveObject.Ruled=False
+App.getDocument('Skylon').ActiveObject.Closed=True
 
-#creating lines of canard
-l1_l = Part.Line(v1_l,v2_l)
-l2_l = Part.Line(v2_l,v3_l)
-l3_l = Part.Line(v3_l,v4_l)
-l4_l = Part.Line(v4_l,v1_l)
+App.ActiveDocument.recompute()
 
-#turning lines into 3-D Shape001
-s1_l = Part.Shape([l1_l,l2_l,l3_l,l4_l])
-w_l = Part.Wire(s1_l.Edges)
-f_l = Part.Face(w_l)
-P_l = f_l.extrude(Base.Vector(0,0,c_thick))
-Part.show(P_l)
+'''
+Creating single entity for STL file
+'''
 
-App.ActiveDocument.recompute
+App.activeDocument().addObject("Part::MultiFuse","Fusion")
+App.activeDocument().Fusion.Shapes = [App.activeDocument().Loft8,App.activeDocument().Loft9,]
+App.ActiveDocument.recompute()
 
-#positioning the canards relative to the frame
-App.getDocument("Skylon").Shape.Placement = App.Placement(App.Vector(d_canard_from_x + c_half_x, 0, d_canard_from_z),App.Rotation(App.Vector(0,1,0),c_alpha))
-App.getDocument("Skylon").Shape001.Placement = App.Placement(App.Vector(d_canard_from_x + c_half_x, 0, d_canard_from_z),App.Rotation(App.Vector(0,1,0),c_alpha))
+App.activeDocument().addObject("Part::MultiFuse","Fusion001")
+App.activeDocument().Fusion001.Shapes = [App.activeDocument().Fusion,App.activeDocument().Loft1,]
+App.ActiveDocument.recompute()
 
-App.ActiveDocument.recompute
+App.activeDocument().addObject("Part::MultiFuse","Fusion002")
+App.activeDocument().Fusion002.Shapes = [App.activeDocument().Fusion001,App.activeDocument().Loft2,]
+App.ActiveDocument.recompute()
+
+App.activeDocument().addObject("Part::MultiFuse","Fusion003")
+App.activeDocument().Fusion003.Shapes = [App.activeDocument().Fusion002,App.activeDocument().Loft5,]
+App.ActiveDocument.recompute()
+
+App.activeDocument().addObject("Part::MultiFuse","Fusion004")
+App.activeDocument().Fusion004.Shapes = [App.activeDocument().Fusion003,App.activeDocument().Loft12,]
+App.ActiveDocument.recompute()
+
+__objs__=[]
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Fusion004"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft10"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft3"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft4"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft11"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft6"))
+__objs__.append(FreeCAD.getDocument("Skylon").getObject("Loft7"))
+
+import Part
+Part.export(__objs__,u"D:/University/Year 4/Dissertation/Skylon/skylongmsh1.brep")
+Part.export(__objs__,u"D:/University/Year 4/Dissertation/Skylon/skylongmsh1.stl")
+
+del __objs__
+
+App.ActiveDocument.recompute()
