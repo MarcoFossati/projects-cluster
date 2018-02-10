@@ -10,32 +10,22 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Lookup Table Model - Copy.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Lookup Table Model - Copy.py">
+    <leaf>
+      <file leaf-file-name="CIRA 1986 V.2.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Model_2/CIRA 1986 V.2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="314">
-              <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+            <state relative-caret-position="1224">
+              <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Ex32.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/../Exercises/Ex32.py">
+      <file leaf-file-name="CIRA 1986 (Non-Time).py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4/CIRA 1986 (Non-Time).py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="si1py.prt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/si1py.prt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
+            <state relative-caret-position="187">
+              <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
               <folding />
             </state>
           </provider>
@@ -60,6 +50,11 @@
         <option value="$PROJECT_DIR$/Lookup Table Model.py" />
         <option value="$PROJECT_DIR$/si1py.prt" />
         <option value="$PROJECT_DIR$/Lookup Table Model - Copy.py" />
+        <option value="$PROJECT_DIR$/Model_3/Model 3.py" />
+        <option value="$USER_HOME$/PycharmProjects/Misc/Matrix.py" />
+        <option value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_3/Model 3.py" />
+        <option value="$PROJECT_DIR$/CIRA 1986 (Non-Time).py" />
+        <option value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4/CIRA 1986 (Non-Time).py" />
       </list>
     </option>
   </component>
@@ -69,7 +64,7 @@
     <option name="height" value="1038" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator currentView="Scope" currentSubView="Project Files" proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -83,7 +78,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,16 +85,32 @@
               <item name="Atmos_Models" type="b2602c69:ProjectViewProjectNode" />
               <item name="Atmos_Models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="Atmos_Models" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Atmos_Models" type="462c0819:PsiDirectoryNode" />
+              <item name="Model_2" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Project Files">
+          <expand>
+            <path>
+              <item name="Root" type="cbb8eebc:String" user="Root" />
+              <item name="Atmos_Models" type="cbb8eebc:String" user="Atmos_Models" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Exercises/Ex32.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4/CIRA 1986 (Non-Time).py" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -114,20 +124,20 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.Lookup Table Model - Copy">
-    <configuration name="ISA Temps" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.CIRA 1986 (Non-Time)">
+    <configuration name="CIRA 1986 (Non-Time)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Atmos_Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ISA Temps.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4/CIRA 1986 (Non-Time).py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -149,71 +159,71 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Lookup Table Model" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Matrix" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$USER_HOME$/PycharmProjects/Misc" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Atmos_Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Lookup Table Model.py" />
+      <option name="SCRIPT_NAME" value="$USER_HOME$/PycharmProjects/Misc/Matrix.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Perfect Gas Calc" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Model 3 (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_3" />
+      <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Atmos_Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Perfect Gas Calc.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_3/Model 3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
-    <configuration name="Tester" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="Model 3" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <envs>
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Model_3" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <module name="Atmos_Models" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tester.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Model_3/Model 3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Python.ISA Temps" />
-      <item index="1" class="java.lang.String" itemvalue="Python.Perfect Gas Calc" />
-      <item index="2" class="java.lang.String" itemvalue="Python.Lookup Table Model" />
-      <item index="3" class="java.lang.String" itemvalue="Python.Tester" />
-      <item index="4" class="java.lang.String" itemvalue="Python.Lookup Table Model - Copy" />
+      <item index="0" class="java.lang.String" itemvalue="Python.Lookup Table Model - Copy" />
+      <item index="1" class="java.lang.String" itemvalue="Python.Model 3" />
+      <item index="2" class="java.lang.String" itemvalue="Python.Matrix" />
+      <item index="3" class="java.lang.String" itemvalue="Python.Model 3 (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Python.CIRA 1986 (Non-Time)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Python.Lookup Table Model - Copy" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Lookup Table Model" />
-        <item index="2" class="java.lang.String" itemvalue="Python.Tester" />
-        <item index="3" class="java.lang.String" itemvalue="Python.ISA Temps" />
-        <item index="4" class="java.lang.String" itemvalue="Python.Perfect Gas Calc" />
+        <item index="0" class="java.lang.String" itemvalue="Python.CIRA 1986 (Non-Time)" />
+        <item index="1" class="java.lang.String" itemvalue="Python.Model 3 (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Matrix" />
+        <item index="3" class="java.lang.String" itemvalue="Python.Model 3" />
+        <item index="4" class="java.lang.String" itemvalue="Python.Lookup Table Model - Copy" />
       </list>
     </recent_temporary>
   </component>
@@ -232,18 +242,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30277187" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12739871" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3630435" sideWeight="0.5021322" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3630435" sideWeight="0.4978678" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3630435" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3997722" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -257,6 +266,11 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <ignored-roots>
+      <path value="$PROJECT_DIR$/.." />
+    </ignored-roots>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <option name="time" value="7" />
@@ -268,7 +282,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -276,23 +289,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/si1py.prt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/si1py.prt" />
     <entry file="file://$PROJECT_DIR$/Lookup Table Model - Copy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -300,25 +304,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="31" lean-forward="true" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/si1py.prt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/si1py.prt" />
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/ISA Temps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1156">
@@ -326,29 +316,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/si1py.prt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/si1py.prt" />
     <entry file="file://$PROJECT_DIR$/Lookup Table Model - Copy.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="425">
           <caret line="25" column="26" lean-forward="true" selection-start-line="25" selection-start-column="26" selection-end-line="25" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/ISA Temps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1428">
@@ -356,21 +332,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/si1py.prt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="966">
-          <caret line="46" column="78" lean-forward="false" selection-start-line="46" selection-start-column="78" selection-end-line="46" selection-end-column="78" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/si1py.prt" />
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/../Exercises/Ex36.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -378,13 +341,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/../Exercises/Ex36.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -392,13 +349,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/../Exercises/Ex36.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -546,13 +497,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="351">
-          <caret line="26" column="50" lean-forward="false" selection-start-line="26" selection-start-column="50" selection-end-line="26" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Lookup Table Model.py" />
     <entry file="file://$PROJECT_DIR$/../Exercises/Ex33.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -560,26 +505,63 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/si1py.prt" />
     <entry file="file://$PROJECT_DIR$/../Exercises/Ex32.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/si1py.prt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="2" lean-forward="false" selection-start-line="12" selection-start-column="2" selection-end-line="12" selection-end-column="2" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Lookup Table Model - Copy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="314">
+        <state relative-caret-position="328">
           <caret line="24" column="32" lean-forward="false" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model_3/Model 3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="56" lean-forward="false" selection-start-line="1" selection-start-column="56" selection-end-line="1" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/PycharmProjects/Misc/Matrix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="334">
+          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="57" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Model_1/Lookup Table Model V.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="20" column="31" lean-forward="true" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_3/Model 3.py" />
+    <entry file="file://$PROJECT_DIR$/Model_2/CIRA 1986 V.2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1224">
+          <caret line="72" column="14" lean-forward="true" selection-start-line="72" selection-start-column="14" selection-end-line="72" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CIRA 1986 (Non-Time).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../../PycharmProjects/Atmos_Models/Model_4/CIRA 1986 (Non-Time).py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="8" lean-forward="true" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
           <folding />
         </state>
       </provider>
