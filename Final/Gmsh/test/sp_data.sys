@@ -1,0 +1,10 @@
+[Main]
+Mode=1
+ColorTemperature=50
+DefaultEyeCareMode=2
+DisplayVersion=3.14.0006
+GradualInterval=250
+GradualLevel=240
+SupportVideoEnhance=1
+IsVideoEnhance=1
+IsSupportedMode=1

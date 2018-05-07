@@ -1,0 +1,66 @@
+                 GetDP is copyright (C) 1997-2017
+
+                          Patrick Dular
+                  <patrick.dular at ulg.ac.be>
+
+                               and
+
+                       Christophe Geuzaine 
+                     <cgeuzaine at ulg.ac.be>
+
+                       University of Liege
+
+Major code contributions to GetDP have been provided by Johan Gyselinck, Ruth
+Sabariego, Michael Asam and Bertrand Thierry. Other code contributors include:
+David Colignon, Tuan Ledinh, Patrick Lefevre, Andre Nicolet, Jean-Francois
+Remacle, Timo Tarhasaari, Christophe Trophime and Marc Ume. See the source code
+for more details.
+
+The AVL tree code (Common/avl.*) is copyright (C) 1988-1993, 1995 The Regents
+of the University of California. Permission to use, copy, modify, and distribute
+this software and its documentation for any purpose and without fee is hereby
+granted, provided that the above copyright notice appear in all copies and that
+both that copyright notice and this permission notice appear in supporting
+documentation, and that the name of the University of California not be used in
+advertising or publicity pertaining to distribution of the software without
+specific, written prior permission.  The University of California makes no
+representations about the suitability of this software for any purpose.  It is
+provided "as is" without express or implied warranty.
+
+The KissFFT code (Numeric/kissfft.hh) is copyright (c) 2003-2010 Mark
+Borgerding. Redistribution and use in source and binary forms, with or without
+modification, are permitted provided that the following conditions are met: *
+Redistributions of source code must retain the above copyright notice, this list
+of conditions and the following disclaimer. * Redistributions in binary form
+must reproduce the above copyright notice, this list of conditions and the
+following disclaimer in the documentation and/or other materials provided with
+the distribution. * Neither the author nor the names of any contributors may be
+used to endorse or promote products derived from this software without specific
+prior written permission. THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND
+CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A
+PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT OWNER OR
+CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY,
+OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING
+IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGE.
+
+This version of GetDP may contain code (in the contrib/Arpack subdirectory)
+written by Danny Sorensen, Richard Lehoucq, Chao Yang and Kristi Maschhoff from
+the Dept. of Computational & Applied Mathematics at Rice University, Houston,
+Texas, USA. See http://www.caam.rice.edu/software/ARPACK/ for more info.
+
+This version of GetDP may contain code (in the contrib/Sparskit subdirectory)
+copyright (C) 1990 Yousef Saad: check the configuration options.
+
+Thanks to the following folks who have contributed by providing fresh ideas on
+theoretical or programming topics, who have sent patches, requests for changes
+or improvements, or who gave us access to exotic machines for testing GetDP:
+Olivier Adam, Alejandro Angulo, Geoffrey Deliege, Mark Evans, Philippe Geuzaine,
+Eric Godard, Sebastien Guenneau, Francois Henrotte, Daniel Kedzierski, Samuel
+Kvasnica, Benoit Meys, Uwe Pahner, Georgia Psoni, Robert Struijs, Ahmed Rassili,
+Thierry Scordilis, Herve Tortel, Jose Geraldo A. Brito Neto, Matthias Fenner,
+Daryl Van Vorst, Guillaume Dem\'esy.
