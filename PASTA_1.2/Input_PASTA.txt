@@ -1,0 +1,48 @@
+~~~~~~~~~~~~~~~~~~~~ P.A.S.T.A INPUT FILE ~~~~~~~~~~~~~~~~~~~~
+-
+~~~~~MAIN DIRECTORY~~~~~
+C:/Users/benpa/OneDrive/5th Year Dissertation/Codes/PASTA/For Github/PASTA_1.2/
+-
+~~~~~GEOMETRY FOLDER~~~~~
+C:/Users/benpa/OneDrive/5th Year Dissertation/FOSTRAD/CAD MODELS/
+-
+##############################################################
+INITIALISATION INPUTS
+##############################################################
+STLname			=	shuttle_smooth_bin.STL
+-
+-
+-
+##############################################################
+OPERATIONAL INPUTS
+##############################################################
+Altitude (km)			=	80
+Velocity (m/s)			=	7500
+Angle of Attack (deg)		=	40
+Angle of Sideslip (deg)		=	0
+Fixed Wall Temp (K)		=	300
+-
+-
+-
+##############################################################
+DESIGN INPUTS
+##############################################################
+Reference Length (m)			=	12.06
+Reference Cross Section (m2)		=	249.909
+Nose Radius (m)				=	0.7196
+-
+-
+-
+##############################################################
+ATMOPSHERE
+##############################################################
+NRLMSISE 00				=	0
+US Standard Atmosphere 1976		=	1
+-
+-
+-
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+

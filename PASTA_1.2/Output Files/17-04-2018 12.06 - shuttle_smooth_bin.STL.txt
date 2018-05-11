@@ -1,0 +1,26 @@
+~~~~~~~~~~~~~~~~~~~~ P.A.S.T.A v1.2 Output File - 17-04-2018 12.06 ~~~~~~~~~~~~~~~~~~~~
+
+STL File:			shuttle_smooth_bin.STL
+
+INPUTS:
+Altitude (km):			80
+Velocity (m/s):			7500
+Angle of Attack (deg):		40
+Angle of Sideslip (deg):	0
+Fixed Wall Temp (K):		300
+Reference Cross Section (m2):	249.909
+Reference Length (m):		12.06
+Nose Radius (m):		0.7196
+
+OUTPUTS:
+Mach Number:			26.5451
+Knudsen Number:			0.000311421
+Reynolds Number:		158.086
+Coefficient of Drag:		0.743606
+Coefficient of Lift:		0.792953
+Coefficient of Sideslip:	3.45614e-08
+Av. Heat Transfer Flux (W/m2):	31642.1
+Av. Heat Transfer Coefficient:	0.0050769
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
