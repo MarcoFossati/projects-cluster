@@ -13,7 +13,7 @@ List of projects (on different branches):
 - **ARCTIC** - Adaptive CFD mesh Regeneration for ComputaTIonal aerodynamiCs
 - **BLAH**   - Boundary LAyer Height generation
 - **MONET**  - MOdelliNg Earth's aTmosphere
-- **OSAKA**  - Open-Source low-fidelity Aerothermodynamics pacKAge
+- **PASTA**  - Panel method Aerodynamic Simulation and Thermal Analysis
 - **PASCAL** - Parametric definition of Access to SpaCe vehicLes
 - **PETRA**  - Parametric dEfinition of fuTuRe Aircraft designs
 - **SWIM**   - Shock Waves Identification Method
