@@ -1,0 +1,5 @@
+MACH=0.1
+REYNOLDS=10000
+TEMPINF=300
+CFL=0.5
+PROJECT_PATH=C:\Users\James\Documents\Programs\Python3\UniversityProject
